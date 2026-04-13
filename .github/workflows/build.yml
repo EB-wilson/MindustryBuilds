@@ -51,7 +51,7 @@ jobs:
         sed -i 's/Mindustry/Mindustry BE/g' android/res/values/strings.xml
         ./gradlew pack
         ./gradlew android:assembleDebug -Pbuildversion=${RELEASE_VERSION} -PversionType=bleeding-edge -PshowCommitHash --stacktrace
-        ls android/build/outputs/apk
+        ls android/build/outputs/apk/debug/
         
     - name: Upload built files
       uses: actions/upload-artifact@v4
